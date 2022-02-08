@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Clock</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        canvas{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="200px" height="200px"></canvas>
+    <button id="close">Stop the Clock</button>
+    <script>
+        let canvas = document.getElementsByTagName("canvas")[0];
+        let ctx = canvas.getContext('2d');
+        ctx.translate(100,100);
+
+        let id = setInterval("drawClock()", 1000);
+
+        let close = document.getElementById("close");
+        close.addEventListener("click",function(){clearInterval(id)});
+
+        function drawClock() {
+            console.log("Timer called");
+            ctx.clearRect(-100,-100,200,200);
+
+            let hours = new Date().getHours();
+            let minutes = new Date().getMinutes();
+            
+            let thetaHour = hours / 12 * 2 * Math.PI;
+            let thetaMinutes = minutes / 60 * 2 * Math.PI;
+
+            let radiusHour = 60;
+            let radiusMinutes = 70;
+
+            ctx.lineWidth = 2;
+
+            ctx.beginPath();
+            ctx.arc(0,0,radiusMinutes + 20, 0, 2 * Math.PI);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(0,0, 5, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.lineWidth = 7;
+        
+            ctx.rotate(thetaHour);
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,-radiusHour);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.rotate(-thetaHour);
+
+            ctx.lineWidth = 5;
+
+            ctx.rotate(thetaMinutes);
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,-radiusMinutes);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.rotate(-thetaMinutes);
+
+        }
+        
+    
+    </script>
+</body>
+
+</html>
