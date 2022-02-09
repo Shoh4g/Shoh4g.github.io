@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div>
+        <video id="videoBG" poster="code2.png" autoplay muted loop>
+            <source src="code.mp4" type="video/mp4">
+        </video>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="hero-image">
+<header>
+    <div class="nine">
+        <h1>SORTING ALGORITHMS<span><b><i>VISUALIZE TO LEARN</i></b></span></h1>
+      </div>
+    </header>
+    <div class="navi">
+    <nav> 
+        <div class="row">
+            <div class="col gap-1 d-sm-flex" id="newArray">
+                <button style="font-family:Playfair Display;text-align:center;" type="button" class="newArray"><b><strong>GENERATE NEW ARRAY</strong></b></button>
+            </div>
+            <div class="col" id="input">
+                <div style="font-family:Playfair Display; text-align:center;"class="size"><span id="size"><strong><I>CHANGE SIZE</I></strong>
+                   <input id="arr_sz" type="range" min="5" max="100" step=1 value=60>
+                </span></div>
+                <span style="font-family:Playfair Display; text-align:center;"id="speed"><strong><I>CHANGE SPEED</I></strong>
+                    <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
+                </span>
+            </div>
+            <div class="col gap-2 d-sm-flex justify-content-end">
+                <button style="font-family:Playfair Display;"type="button" class="bubbleSort"><b><strong>BUBBLE SORT</strong></b></button>
+                <button style="font-family:Playfair Display;"type="button" class="selectionSort"><b><strong>SELECTION SORT</strong></b></button>
+                <button style="font-family:Playfair Display;"type="button" class="insertionSort"><b><strong>INSERTION SORT</strong></b></button>
+                <button style="font-family:Playfair Display;"type="button" class="quickSort"><b><strong>QUICK SORT</strong></b></button>
+                <button style="font-family:Playfair Display;"type="button" class="mergeSort"><b><strong>MERGE SORT</strong></b></button>
+            </div>
+            
+        </div>
+    </nav>
+</div>
+    </div>
+    
+
+<body>
+   
+    <div id="bars" class="flex-container"></div>
+</div>
+<br>
+<div class="author">
+<footer>&copy; <b><i><strong>Author: Sabyasachi Purkayastha</strong></i></b></footer>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js_files/sorting.js"></script>
+    <script src="js_files/bubble.js"></script>
+    <script src="js_files/insertion.js"></script>
+    <script src="js_files/merge.js"></script>
+    <script src="js_files/quick.js"></script>
+    <script src="js_files/selection.js"></script>
+</body>
+</html>
+
+
+
+
