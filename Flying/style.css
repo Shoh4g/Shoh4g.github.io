@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background-color: #27053c;
+}
+
+#container {
+    background: rgb(110, 6, 174);
+    background: linear-gradient(0deg, rgb(114, 15, 176) 0%, rgba(149,14,215,1) 100%);
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#glow {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -300px;
+    width: 650px;
+    height: 650px;
+    background-color: white;
+    border-radius: 400px;
+    box-shadow: 0 0 250px 80px rgba(120, 179, 3, 0.543);
+}
+
+#moon {
+    opacity: 1;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -319px;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(-359deg); 
+    }
+}
+
+#town {
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    width: 1200px;    
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;   
+    animation-name: spin;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#broom {
+    position: absolute;
+    transition: transform 1.5s ease-out;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+#pumpkin {
+    position: absolute;
+    left: -1000px;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+h1 {
+    color: #ffffff;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
